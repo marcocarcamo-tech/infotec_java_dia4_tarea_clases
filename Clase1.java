@@ -1,5 +1,7 @@
 package _tarea;
 
+import java.util.Objects;
+
 public class Clase1 {
 
     private String nombre;
@@ -49,7 +51,14 @@ public class Clase1 {
     
     @Override
     public boolean equals(Object obj){
+        //En este caso el valor de la comparación entre objetos es el atributo nombre. Si el nombre es diferente en dos objetos, devolverá false.
         Clase1 claseComparacion = (Clase1) obj;
         return this.nombre.equals(claseComparacion.getNombre());
+    }
+
+    @Override
+    public int hashCode() {
+    
+    return Objects.hashCode(getNombre());
     }
 }

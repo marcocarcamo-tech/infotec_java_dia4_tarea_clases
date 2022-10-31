@@ -5,6 +5,7 @@ public class Clase2 {
     static Integer telefono;
     static String direccion;
 
+   
     static Clase1 metodo1(Clase1 individuo) {
         return individuo;
     }
